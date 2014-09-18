@@ -1,0 +1,28 @@
+/* CSS declarations go here */
+html,body{
+  padding:0;
+  height:100%;
+  margin:0;
+  font-family: 'Droid Sans', 'Helvetica Neue', 'Arial', 'sans-serif';
+}
+body{
+  background-color: hotpink;
+  text-align: center;
+}
+body.buzz{
+  background-color: red;
+}
+body.buzz:after{
+  content:'BUZZ!',
+  display:block;
+  font-family: monospace;
+  font-size: 60px;
+}
+
+button{
+  font-size: 20px;
+  background: cornflowerblue;
+  padding:8px 20px;
+  border-radius:3px;
+  border: none;
+}
