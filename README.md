@@ -170,6 +170,9 @@ want this mobile app to point to the server running on http://buzz.meteor.com
 And that's it. You can see it live on http://buzz.meteor.com
 There is a button there you should never press.
 
+
+![Buzz on Android](https://cloud.githubusercontent.com/assets/58871/4338257/6c1fbb4e-4017-11e4-8744-20b55f0f00f5.png)
+
 ## Credits
 
 Vibrate icon designed by <a href="http://www.thenounproject.com/Jetro">Jetro Cabau Quirós</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
