@@ -8,16 +8,16 @@ of all the latest goodies as they appear:
 
 https://github.com/meteor/meteor/blob/devel/History.md
 
-A quick peruse show that with the 0.9.1 release a collection of new commandline
+A quick peruse shows that with the 0.9.1 release a collection of new commandline
 incantations are available to turn your web apps into fully-fledged,
 handset-bothering android & iOS native apps, via the magic of cordova.
 
 Following the link to the Cordova integration wiki page
 https://github.com/meteor/meteor/wiki/Meteor-Cordova-Phonegap-integration
 
-we find a pretty through getting started guide, so let's try it out.
+We find a pretty thorough getting started guide, so let's try it out.
 
-Let's build and app. Something simple, but real-time and doing something that's
+Let's build an app. Something simple, but real-time and doing something that's
 only possible for native apps, beyond the reach of current web-apis.
 
 How about a curious trust experiment in remote vibration?
@@ -40,7 +40,7 @@ Add android support
 ```
 
 Wowzers. That downloads half the internet, but it's the half that makes native
-app developement possible, and metoer configures it all for you so, it's a good
+app developement possible, and meteor configures it all for you so, it's a good
 thing. There's also the butt ugly download logging and license agreement, but I
 reckon that'll get better. It gets the job done and its a order of magnitude
 easier than setting it all up yourself.
@@ -57,7 +57,7 @@ Template.hello.events({
     Session.set("counter", Session.get("counter") + 1);
 
     // Record the click as an object in the Buzz collection.
-    Buzz.insert({ createdAt: Date.now()})
+    Buzz.insert({ createdAt: Date.now() })
   }
 });
 ```
@@ -66,12 +66,12 @@ Now we want to `observe` that collection and whenever a new buzz record is added
 it should make my phone vibrate...
 
 ```javascript
-if (Meteor.isCordova){
+if (Meteor.isCordova) {
 
   Meteor.startup(function () {
 
     Buzz.find({}).observe({
-      added:function (doc) {
+      added: function (doc) {
         // How to do a vibrate?
       }
     })
