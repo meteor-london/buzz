@@ -170,6 +170,10 @@ want this mobile app to point to the server running on http://buzz.meteor.com
 And that's it. You can see it live on http://buzz.meteor.com
 There is a button there you should never press.
 
+## Credits
+
+Vibrate icon designed by <a href="http://www.thenounproject.com/Jetro">Jetro Cabau Quirós</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
+
 All the code on github: https://github.com/meteor-london/buzz
 
 Presented at [Meteor London][7], 18th Sept 2014
@@ -177,8 +181,6 @@ Presented at [Meteor London][7], 18th Sept 2014
 by [@olizilla][8] & [@_alanshaw][9]
 
 [(╯°□°）╯︵ TABLEFLIP](http://tableflip.io/)
-
------
 
 [1]: https://github.com/meteor/meteor/blob/devel/History.md
 [2]: http://cordova.apache.org/
