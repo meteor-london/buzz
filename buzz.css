@@ -1,32 +1,81 @@
-/* CSS declarations go here */
-html,body{
+html,body {
   padding:0;
   height:100%;
   margin:0;
-  font-family: 'Droid Sans', 'Helvetica Neue', 'Arial', 'sans-serif';
+
 }
-body{
+body {
   text-align: center;
-  background:hotpink url('buzz.svg') center bottom no-repeat;
-  background-size:30% auto;
+  background: hotpink;
+  transition: background 250ms;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+button {
+  color: white;
+  letter-spacing: 2px;
+  font-size: 28px;
+  line-height: 1.6em;
+  background: #444;
+  padding:28px 28px 8px;
+  border-radius:10px;
+  border: solid 6px black;
+  transition: background-color 400ms, border-color 50ms;
+}
+button:hover {
+  background-color: red;
+}
+button:focus {
+  outline: none;
+}
+p {
+  opacity: 0;
+  transition:opacity 50ms;
+}
+img {
+  position: absolute;
+  bottom:10px;
+  left: calc(50% - 108px);
+  width:220px;
 }
 body.buzz{
   background-color: red;
 }
-body.buzz:after{
-  content:'BUZZ!',
-  display:block;
-  font-family: monospace;
-  font-size: 60px;
+body.buzz img {
+  -webkit-animation: shake 500ms;
+  animation: shake 500ms;
+}
+body.buzz button {
+  border-color: white;
+}
+body.buzz p {
+  opacity: 1;
 }
 
-button{
-  font-size: 20px;
-  background: lightcyan;
-  padding:18px 28px;
-  border-radius:38px;
-  border: none;
+@-webkit-keyframes shake {
+  0%  { -webkit-transform: translate(2px, 0px) rotate(0deg); }
+  10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+  30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+  40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+  50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+  70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+  80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+  90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+  100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 }
-button:hover{
-  background: cyan;
+
+@keyframes shake {
+  0%  { transform: translate(2px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(0px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(2px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }

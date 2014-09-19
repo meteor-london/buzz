@@ -1,4 +1,5 @@
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>buzz</title>
 </head>
 
@@ -6,9 +7,11 @@
   <h1>DO NOT PRESS</h1>
 
   {{> hello}}
+
+  <img src="/buzz.svg" alt=""/>
 </body>
 
 <template name="hello">
-  <button>BUTTON</button>
+  <button>&#x261D;</button>
   <p>You've pressed the button {{counter}} times.</p>
 </template>
