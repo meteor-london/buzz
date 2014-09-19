@@ -2,7 +2,6 @@ html,body {
   padding:0;
   height:100%;
   margin:0;
-
 }
 body {
   text-align: center;
@@ -21,6 +20,7 @@ button {
   border-radius:10px;
   border: solid 6px black;
   transition: background-color 400ms, border-color 50ms;
+  z-index: 100;
 }
 button:hover {
   background-color: red;
@@ -35,8 +35,9 @@ p {
 img {
   position: absolute;
   bottom:10px;
-  left: calc(50% - 108px);
+  left: calc(50% - 110px);
   width:220px;
+  z-index: -10;
 }
 body.buzz{
   background-color: red;
