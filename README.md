@@ -172,7 +172,11 @@ There is a button there you should never press.
 
 All the code on github: https://github.com/meteor-london/buzz
 
+Presented at [Meteor London][7], 18th Sept 2014
 
+by [@olizilla][8] & [@_alanshaw][9]
+
+[(╯°□°）╯︵ TABLEFLIP](http://tableflip.io/)
 
 -----
 
@@ -181,3 +185,6 @@ All the code on github: https://github.com/meteor-london/buzz
 [3]: https://github.com/meteor/meteor/wiki/Meteor-Cordova-Phonegap-integration
 [5]: http://phonegap.com/2012/05/09/phonegap-beliefs-goals-and-philosophy/ "The ultimate purpose of PhoneGap is to cease to exist."
 [6]: https://www.meteor.com/blog/2014/02/25/meteor-developer-accounts
+[7]: http://www.meetup.com/Meteor-London/
+[8]: https://twitter.com/olizilla
+[9]: https://twitter.com/_alanshaw
