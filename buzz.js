@@ -1,6 +1,8 @@
 Buzz = new Mongo.Collection('buzz')
 
 if (Meteor.isClient) {
+  Meteor.subscribe('buzzez-from-now')
+
   // counter starts at 0
   Session.setDefault("counter", 0)
 
@@ -31,5 +33,11 @@ if (Meteor.isClient) {
         }
       }
     })
+  })
+}
+
+if (Meteor.isServer) {
+  Meteor.publish('buzzez-from-now', function () {
+    return Buzz.find({ createdAt: { $gte: Date.now() }})
   })
 }

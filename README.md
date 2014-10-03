@@ -173,6 +173,40 @@ There is a button there you should never press.
 
 ![Buzz on Android](https://cloud.githubusercontent.com/assets/58871/4338257/6c1fbb4e-4017-11e4-8744-20b55f0f00f5.png)
 
+## Tidying up
+
+We're relying on the package `autopublish` to automagically sync the entire contents of the Buzz collection with the client.
+As people press the button and buzz objects get added to the collection, `autopublish` ensure that all connected users see the change.
+The problem is we're only interested in buzzes that get added after we load the page. Right now we're loading every buzz ever made, all at once, as the page loads, which is sub-optimal.
+Assuming no one ever presses the button, that won't be a problem, but in the spirit of professionalism, let's fix it any way.
+
+
+The `autopublish` package is enabled by default, so let's remove it and handle the data pub/sub syncronisation dance ourselves.
+
+```shell
+ meteor remove autopublish
+```
+
+Now lets create a publish function that only sends records created after a user connects
+
+```javascript
+if (Meteor.isServer) {
+  Meteor.publish('buzzez-from-now', function () {
+    return Buzz.find({ createdAt: { $gte: Date.now() }})
+  })
+}
+```
+
+and on the client side, we subscribe to it
+
+```javascript
+if (Meteor.isClient) {
+  Meteor.subscribe('buzzez-from-now')
+}
+```
+
+And that's it. Now don't go getting into any trouble and don't be pressing that button.
+
 ## Credits
 
 Vibrate icon designed by <a href="http://www.thenounproject.com/Jetro">Jetro Cabau Quirós</a> from the <a href="http://www.thenounproject.com">Noun Project</a>
